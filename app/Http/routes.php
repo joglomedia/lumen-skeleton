@@ -11,7 +11,7 @@
 |
 */
 $app->get('/', 'HomeController@index');
-
+$app->get('/cursos', 'HomeController@course');
 $app->get('/about', function() use ($app){
 
     $data = [

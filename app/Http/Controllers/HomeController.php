@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Course;
+use App\User;
+
 class HomeController extends Controller
 {
     /**
@@ -21,5 +24,16 @@ class HomeController extends Controller
                 'app' => ''
             ];
         return view('home', $data);
+    }
+
+    public function course()
+    {
+        $c = Course::create([
+                'name' => 'Laravel',
+                'code' => 'LRVL',
+                'description' => 'Curso de Laravel para OTIN'
+            ]);
+
+        return Course::all();
     }
 }
