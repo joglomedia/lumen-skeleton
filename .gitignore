@@ -1,5 +1,6 @@
 /vendor
 /database/*.sqlite
+/node_modules
 .env
 .c9
 .idea

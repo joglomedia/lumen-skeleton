@@ -10,7 +10,7 @@
     <link href="{{ $app or '' }}/packages/flat-ui/dist/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-    <link href="{{ $app or '' }}/packages/flat-ui/dist/css/flat-ui.css" rel="stylesheet">
+    <link href="{{ $app or '' }}/packages/flat-ui/dist/css/flat-ui.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ $app }}/favicon.ico">
 
@@ -22,7 +22,7 @@
   </head>
   <body>
     @include("base.nav")
-    <div class="container">
+    <div id="App" class="container">
         @yield("content")
     </div>
     <!-- /.container -->
@@ -30,7 +30,7 @@
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/vendor/jquery.min.js"></script>
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/vendor/video.js"></script>
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/flat-ui.min.js"></script>
-    <script src="{{ $app or '' }}/packages/vue/dist/vue.min.js"></script>
+    <script src="{{ $app or '' }}/packages/vue/dist/vue.js"></script>
 
     @yield("scripts")
   </body>

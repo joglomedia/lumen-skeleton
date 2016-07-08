@@ -1,0 +1,30 @@
+{
+  "name": "lumen-skeleton",
+  "version": "1.0.0",
+  "description": "A skeleton project for Lumen microframework",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaravelPeru/lumen-skeleton.git"
+  },
+  "keywords": [
+    "lumen",
+    "laravel",
+    "skeleton"
+  ],
+  "author": "Nick B. Palomino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LaravelPeru/lumen-skeleton/issues"
+  },
+  "homepage": "https://github.com/LaravelPeru/lumen-skeleton#readme",
+  "dependencies": {
+    "vue-router": "^0.7.13"
+  }
+}
