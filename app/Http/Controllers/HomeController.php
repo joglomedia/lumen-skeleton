@@ -41,7 +41,7 @@ class HomeController extends Controller
         //$this->loader = new Twig_Loader_Filesystem($this->view_path);
         $this->options = [];
         $this->loader = new Twig_Loader_Array([
-            'index' => 'Hello {{ name |upper }} with some @{{ foo }} sdsd'
+            'index' => 'Hello {{ name |upper }} with some {% {{ foo }} sdsd'
         ]);
         $this->twig   = new Twig_Environment($this->loader, $this->options);
 

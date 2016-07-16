@@ -16,12 +16,5 @@
 
 @section("scripts")
 <script type="text/javascript">
-    var App = new Vue({
-        el: '#App',
-        data: {
-            cta: 'Ver cursos!!'
-        }
-    });
-    console.dir(App);
 </script>
 @endsection

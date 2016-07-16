@@ -22,7 +22,7 @@
   </head>
   <body>
     @include("base.nav")
-    <div id="App" class="container">
+    <div id="app" class="container">
         @yield("content")
     </div>
     <!-- /.container -->
@@ -30,8 +30,8 @@
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/vendor/jquery.min.js"></script>
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/vendor/video.js"></script>
     <script src="{{ $app or '' }}/packages/flat-ui/dist/js/flat-ui.min.js"></script>
-    <script src="{{ $app or '' }}/packages/vue/dist/vue.js"></script>
 
+    <script src="{{ $app or '' }}/app/build.js"></script>
     @yield("scripts")
   </body>
 </html>
