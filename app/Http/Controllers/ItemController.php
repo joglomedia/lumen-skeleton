@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Course;
 use App\User;
-use Twig_Loader_Array;
-use Twig_Loader_Filesystem;
-use Twig_Environment;
 
-class HomeController extends Controller
+class ItemController extends Controller
 {
     /**
      * Create a new controller instance.

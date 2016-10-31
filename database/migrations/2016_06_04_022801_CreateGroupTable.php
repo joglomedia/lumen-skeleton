@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEvalTable extends Migration
+class CreateGroupTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,9 @@ class CreateEvalTable extends Migration
      */
     public function up()
     {
-        Schema::create('evals', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('course_id')->unsigned();
-            $table->integer('question_id')->unsigned();
-            $table->string('answer');
+            $table->string('name');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
@@ -29,6 +27,6 @@ class CreateEvalTable extends Migration
      */
     public function down()
     {
-        Schema::drop('evals');
+        Schema::drop('groups');
     }
 }

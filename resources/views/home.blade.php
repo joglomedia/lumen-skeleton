@@ -7,7 +7,8 @@
     </h1>
     <p>Serie de cursos y talleres para el equipo de la Oficina Técnica de Informática.</p>
     <a href="#fakelink" class="btn btn-success btn-embossed btn-wide">@{{ cta }}</a>
-    <p>Ingrese valor: <input type="text" v-model="cta"></p>
+    <p>{{ var_dump($dada) }}</p>
+    <p>Ingrese valor: <input type="text" class="input-control" v-model="cta"></p>
 </div>
 <div class="well well-sm">
     @{{ $data |json }}

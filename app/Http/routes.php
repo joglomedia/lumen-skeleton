@@ -10,8 +10,15 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$app->get('/', 'HomeController@index');
-$app->get('/cursos', 'HomeController@course');
+$app->get('/', function() use ($app){
+    $data = [
+            'org' => 'OTIN',
+            'app' => '',
+            'dada' => App\Group::find(1),
+        ];
+    return view('home', $data);
+});
+$app->get('/item', 'ItemController@index');
 $app->get('/about', function() use ($app){
 
     $data = [

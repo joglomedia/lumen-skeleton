@@ -31,4 +31,9 @@ class User extends Model implements
     protected $hidden = [
         'password',
     ];
+
+    public function groups()
+    {
+        return $this->belongsToMany('App\Group', 'members');
+    }
 }
