@@ -108,6 +108,17 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
+$app->singleton('resource', function(\Laravel\Lumen\Application $app)  {
+    return function($route, $controller) use ($app) {
+        $app->get($route, "{$controller}@index");
+        $app->get($route."/create", "{$controller}@create");
+        $app->post($route, "{$controller}@store");
+        $app->get($route."/{id}", "{$controller}@show");
+        $app->get($route."/{id}/edit", "{$controller}@edit");
+        $app->put($route."/{id}", "{$controller}@update");
+        $app->delete($route."/{id}", "{$controller}@destroy");
+    };
+});
 
 $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';

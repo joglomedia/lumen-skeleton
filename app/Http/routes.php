@@ -18,10 +18,10 @@ $app->get('/', function() use ($app){
         ];
     return view('home', $data);
 });
-$app->get('/item', 'ItemController@index');
-$app->get('/about', function() use ($app){
 
-    $data = [
+$app->make('resource')('/items', 'ItemController');
+$app->get('/about', function() use ($app){
+    return [
         'Author'    => 'Nick B. Palomino',
         'Key'       => env('APP_KEY'),
         'Environment'=> app()->environment(),
@@ -29,6 +29,4 @@ $app->get('/about', function() use ($app){
         'App Filesystem(array)' => config('filesystem.motor'),
         'Version'   => $app->version()
     ];
-
-    return $data;
 });

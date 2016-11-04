@@ -17,11 +17,13 @@ class ItemController extends Controller
     public function index()
     {
         // GET -> /item
+        return ['view'=>'index'];
     }
 
     public function create()
     {
         // GET -> /item/create
+        return ['view'=>'create'];
     }
 
     public function store()
@@ -34,9 +36,10 @@ class ItemController extends Controller
         // GET -> /item/{id}
     }
 
-    public function edit()
+    public function edit($id)
     {
         // GET -> /item/{id}/edit
+        return ['view'=>'edit','value'=>$id];
     }
 
     public function update()
