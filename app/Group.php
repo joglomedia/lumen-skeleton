@@ -31,6 +31,6 @@ class Group extends Model
 
     public function balances()
     {
-        return $this->hasManyThrough('App\Item', 'App\Balance');
+        return $this->hasMany('App\Balance');
     }
 }

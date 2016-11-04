@@ -12,7 +12,7 @@ class Item extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'status'
+        'name', 'status', 'mount'
     ];
 
     /**
@@ -23,4 +23,9 @@ class Item extends Model
     protected $hidden = [
 
     ];
+
+    public function balance()
+    {
+        return $this->hasOne('App\Balance');
+    }
 }

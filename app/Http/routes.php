@@ -14,7 +14,7 @@ $app->get('/', function() use ($app){
     $data = [
             'org' => 'OTIN',
             'app' => '',
-            'dada' => App\Group::find(1)->balances,
+            'dada' => App\User::find(1),
         ];
     return view('home', $data);
 });

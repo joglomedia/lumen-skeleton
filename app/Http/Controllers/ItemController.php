@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Course;
+use App\Item;
+use App\Balance;
+use App\Group;
 use App\User;
 
 class ItemController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         //
@@ -19,29 +16,36 @@ class ItemController extends Controller
 
     public function index()
     {
-        $data = [
-                'org' => 'OTIN',
-                'app' => ''
-            ];
-        return view('home', $data);
+        // GET -> /item
     }
 
-    public function course()
+    public function create()
     {
-        /*$c = Course::create([
-                'name' => 'Laravel',
-                'code' => 'LRVL',
-                'description' => 'Curso de Laravel para OTIN'
-            ]);*/
+        // GET -> /item/create
+    }
 
-        // Twig Templating System
-        //$this->loader = new Twig_Loader_Filesystem($this->view_path);
-        $this->options = [];
-        $this->loader = new Twig_Loader_Array([
-            'index' => 'Hello {{ name |upper }} with some @{{ foo }} sdsd'
-        ]);
-        $this->twig   = new Twig_Environment($this->loader, $this->options);
+    public function store()
+    {
+        // POST -> /item
+    }
 
-        echo $this->twig->render('index', ['name'=>'Nick B. Palomino']);
+    public function show()
+    {
+        // GET -> /item/{id}
+    }
+
+    public function edit()
+    {
+        // GET -> /item/{id}/edit
+    }
+
+    public function update()
+    {
+        // PUT -> /item/{id}
+    }
+
+    public function delete()
+    {
+        // DELETE -> /item/{id}
     }
 }

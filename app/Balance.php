@@ -23,4 +23,19 @@ class Balance extends Model
     protected $hidden = [
 
     ];
+
+    public function item()
+    {
+        return $this->belongsTo('App\Item');
+    }
+
+    public function groups()
+    {
+        return $this->belongsTo('App\Group');
+    }
+
+    public function isPositive()
+    {
+        return (bool)$this->type;
+    }
 }
